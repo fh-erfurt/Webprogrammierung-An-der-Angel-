@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/styles/documentation.css">
+    <title>Dokumentation</title>
+</head>
+
+<body>
+    <div class="documentation">
+        <h1>Dokumentation</h1>
+        <p>
+            Projekt von Marlene Bauch, Johannes Otto, Michel Rost
+        </p>
+        <br>
+
+        <a href="../index.php?c=pages&a=home">Zurück zur Startseite</a>
+        <br>
+
+        <h2>Inhaltsverzeichnis</h2>
+        <a href="#inhalt">Inhalt</a>
+        <a href="#recherche">Recherche</a>
+        <a href="#kriterien">Zielbestimmungen und Kriterien</a>
+        <a href="#seitenlayout">Seitenlayout</a>
+        <a href="#navigation">Navigationsstruktur</a>
+        <a href="#design">Design</a>
+        <a href="#funktionalitaeten">Funktionalitäten</a>
+        <a href="#projektstruktur">Projektstruktur</a>
+        <a href="#datenbank">Datenbank</a>
+        <a href="#rollenmodell">Rollenmodell</a>
+        <a href="#flussbild">Flussbild für Dateneingabe</a>
+        <a href="#herausforderungen">Herausforderungen</a>
+        <a href="#besonderheiten">Besonderheiten</a>
+        <a href="#projektmanagement">Projektmanagement-Dokumentation</a>
+        <br>
+
+        <h2 id="inhalt">Einleitung</h2>
+        <p>
+            Für die Module Grundlagen Webprogrammierung und Dynamische Webprogrammierung soll in Gruppen eine Website mit Shop-System erstellt werden.
+        </p>
+        <p>
+            Neben der passenden optischen Anmutung und guten Bedienbarkeit ist die zentrale Funktionalität der Shop: also die Verwaltung, Präsentation, Auswahl und der "Kauf" von Artikeln.
+        </p>
+        <br>
+
+        <h2>Ausgangssituation</h2>
+        <p>
+            Die Firma An der Angel existiert noch nicht allzu lange. Sie wurde von einer Gruppe leidenschaftlicher Angler gegründet, die bereits seit Jahren auf der Suche nach den besten Ködern für einen erfolgreichen Angelausflug sind.
+        </p>
+        <p>
+            Deshalb haben sie es sich zum Ziel gemacht, hochwertige Angelköder und Zubehör zu verkaufen. Dafür benötigt die Firma einen geeigneten Online-Shop, der die Kunden nicht nur anlockt, sondern sie auch auf der Seite hält.
+        </p>
+        <br>
+        <p>
+            Die Kunden sind interessiert an einer übersichtlichen und schlichten Website, wo der Fokus auf den Produkten liegt. Im Winter werden sie wohl etwas mehr Zeit beim Einkauf von Ködern verbringen als im Sommer.
+        </p>
+        <p>
+            Der Bestellvorgang sollte deshalb aus wenigen Schritten bestehen ohne ständige Überprüfung der Kontaktdaten.
+        </p>
+        <br>
+
+        <h2 id="recherche">Recherche</h2>
+        <a href="https://www.lieblingskoeder-fanshop.de/">
+            <h3>www.lieblingskoeder-fanshop.de</h3>
+        </a>
+        <img src="../assets/images/docu/lk-fanshop.jpg" alt="Lieblingsköder-Fanshop Startseite">
+        <ul>
+            <li>
+                Farbflächen erstrecken sich nicht über die gesamte Breite
+            </li>
+            <li>
+                übersichtliche Navigation mit Untermenüpunkten
+            </li>
+        </ul>
+        <img src="../assets/images/docu/lk-fanshop2.jpg" alt="Lieblingsköder-Fanshop Gummifische">
+        <ul>
+            <li>
+                Erster Blick zum Bild, also Fokus auf der Farbe der Gummifische, obwohl nach Größen sortiert
+            </li>
+        </ul>
+        <br>
+        <a href="https://www.angelsport.de/">
+            <h3>www.angelsport.de</h3>
+        </a>
+        <img src="../assets/images/docu/angelsport.jpg" alt="Angelsport Rollen">
+        <ul>
+            <li>
+                Navigationsleiste oben
+            </li>
+            <li>
+                Auf der linken Seite weitere Untermenüs und Filter
+            </li>
+            <li>
+                sehr detaillierte Auswahlmöglichkeiten, unübersichtlich
+            </li>
+            <li>
+                Grünton zu grell
+            </li>
+            <li>
+                Inhalt der Seite ist zentriert
+            </li>
+            <li>
+                Wirkt nicht sehr modern
+            </li>
+        </ul>
+        <br>
+        <a href="https://www.zeck-fishing.com/shop">
+            <h3>www.zeck-fishing.com</h3>
+        </a>
+        <img src="../assets/images/docu/zeck-fishing.jpg" alt="Zeck-Fishing Startseite">
+        <ul>
+            <li>
+                Startseite mit aktuellen Themen
+            </li>
+            <li>
+                Modern und übersichtlich
+            </li>
+            <li>
+                Kategorien verbildlicht durch Piktogramme statt Produktfotos
+            </li>
+        </ul>
+        <img src="../assets/images/docu/zeck-fishing2.jpg" alt="Zeck-Fishing Kunstköder">
+        <ul>
+            <li>
+                Übersichtliches Filtermenü
+            </li>
+            <li>
+                Schlichtes Design in Grautönen mit zwei Akzentfarben, Fokus liegt auf den Produkten
+            </li>
+        </ul>
+        <br>
+
+        <h2 id="kriterien">Zielbestimmungen</h2>
+        <p>
+            Kunden sollen sich Produkte ansehen und diese nach bestimmten Kriterien filtern können. Der Online-Shop soll es eingeloggten Kunden ermöglichen, Produkte in einen Warenkorb zu legen und zu kaufen.
+        </p>
+        <p>
+            Da ein Kundenkonto Voraussetzung für eine Bestellung ist, kann auf eine Überprüfung der Adresse vor Kaufabschluss verzichtet werden.
+        </p>
+        <br>
+
+        <h2>Muss-Kriterien</h2>
+        <ul>
+            <li>
+                Responsive Webdesign
+            </li>
+            <li>
+                Registration / Kundenkonto erstellen
+            </li>
+            <li>
+                Registrierte Kunden sollen sich einloggen können
+            </li>
+            <li>
+                Datenänderung im Kundenkonto, Kundenkonto löschen
+            </li>
+            <li>
+                Übersicht aller Produkte
+            </li>
+            <li>
+                Übersicht aller Produkte einer Kategorie
+            </li>
+            <li>
+                Übersicht aller Produkte, die im Preis reduziert sind
+            </li>
+            <li>
+                Filterung der Produkte nach Kategorie, Preis und Hersteller
+            </li>
+            <li>
+                Produkte in den Warenkorb legen
+            </li>
+            <li>
+                Produkte im Warenkorb bestellen/kaufen
+            </li>
+        </ul>
+        <br>
+
+        <h2>Wunsch-Kriterien</h2>
+        <ul>
+            <li>
+                Produktanzahl im Warenkorb ändern, Produkte auch entfernbar
+            </li>
+            <li>
+                Suchfunktion
+            </li>
+            <li>
+                Kontaktformular
+            </li>
+        </ul>
+        <br>
+
+        <h2>Abgrenzungskriterien</h2>
+        <ul>
+            <li>
+                Stilangabe für Druckausgabe
+            </li>
+            <li>
+                Einpflegen neuer Produkte über die Website
+            </li>
+        </ul>
+        <br>
+
+        <h2 id="seitenlayout">Seitenlayout</h2>
+        <h3>Startseite</h3>
+        <img src="../assets/images/docu/wireframe-startseite.jpg" alt="Wireframe Startseite">
+        <img src="../assets/images/docu/mockup-startseite.jpg" alt="Mockup Startseite">
+        <br>
+        <h3>Login</h3>
+        <img src="../assets/images/docu/wireframe-login.jpg" alt="Wireframe Login">
+        <br>
+        <h3>Konto</h3>
+        <img src="../assets/images/docu/wireframe-konto.jpg" alt="Wireframe Konto">
+        <br>
+        <h3>Produkte</h3>
+        <img src="../assets/images/docu/wireframe-produkte.jpg" alt="Wireframe Produkte">
+        <img src="../assets/images/docu/mockup-produkte.jpg" alt="Mockup Produkte">
+        <br>
+        <h3>Warenkorb</h3>
+        <img src="../assets/images/docu/wireframe-warenkorb.jpg" alt="Wireframe Warenkorb">
+        <br>
+
+        <h2 id="navigation">Navigationsstruktur</h2>
+        <ul>
+            <li>
+                Startseite
+            </li>
+            <li>
+                Angebote
+            </li>
+            <li>
+                Produkte
+                <ul>
+                    <li>
+                        Gummifisch
+                    </li>
+                    <li>
+                        Wobbler
+                    </li>
+                    <li>
+                        Blinker
+                    </li>
+                    <li>
+                        Spinner
+                    </li>
+                    <li>
+                        Pilker
+                    </li>
+                    <li>
+                        Fliegen
+                    </li>
+                    <li>
+                        Vorfächer
+                    </li>
+                    <li>
+                        Haken
+                    </li>
+                    <li>
+                        Bleiköpfe
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Warenkorb
+                <ul>
+                    <li>Kasse</li>
+                </ul>
+            </li>
+            <li>
+                Konto
+                <ul>
+                    <li>
+                        Login
+                    </li>
+                    <li>
+                        Konto erstellen
+                    </li>
+                    <li>
+                        Kundenkonto
+                        <ul>
+                            <li>
+                                Profildaten ändern
+                            </li>
+                            <li>
+                                Adresse ändern
+                            </li>
+                            <li>
+                                Account löschen
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Impressum
+                <ul>
+                    <li>
+                        Dokumentation
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Datenschutz
+            </li>
+        </ul>
+        <p>
+            Wenn man auf ein einzelnes Produkt klickt, kommt man auf die Seite mit den Produktdetails.
+        </p>
+        <br>
+
+        <h2 id="design">Design</h2>
+        <ul>
+            <li>
+                Layout
+                <ul>
+                    <li>
+                        Die Navigationsleiste in der mobilen Variante erstreckt sich über die gesamte Breite, um eine Grenze zwischen dem Logo und dem Seiteninhalt zu ziehen, so wie in der Desktop-Variante.
+                    </li>
+                    <li>
+                        Auf der Startseite befinden sich keine Produkte, weil diese der Firmen-Vorstellung dienen soll. Dank der Navigationsleiste gelangt man schnell zu den angebotenen Produkten.
+                    </li>
+                    <li>
+                        Die Filter befinden sich in der Desktop-Variante auf der linken Seite, da es auf vielen Internetseiten so ist und dementsprechend sind wir daran gewöhnt und suchen intuitiv auf der linken Seite danach.
+                    </li>
+                    <li>
+                        Die Filter befinden sich in der mobilen Variante unterhalb der Überschrift (z.B. Produkte oder Gummifisch), damit erkennbar ist, dass das ausklappbare Menü sich auf die Produkte unterhalb bezieht.
+                    </li>
+                    <li>
+                        Der Seiteninhalt auf der Produktdetail-Seite erstreckt sich in der Desktop-Variante nicht über die gesamte Breite, da die Informationen kurz sind. Die Informationen sind untereinander, um die Übersichtlichkeit zu erhalten.
+                    </li>
+                    <li>
+                        Die Varianten für mobile Geräte und Desktop sind sich sehr ähnlich, damit man sich in beiden Versionen schnell zurecht findet.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Farben
+                <ul>
+                    <li>
+                        Wir haben und für den dunklen Grünton entschieden, da viele Zubehörartikel zum Angeln in grün und Tarnfarben gehalten sind. Außerdem passt die Farbe sehr gut zur Natur.
+                    </li>
+                    <li>
+                        Die Grauabstufungen helfen bei der Trennung verschiedener Bereiche und wirken seriöser als helle Grüntöne.
+                    </li>
+                    <li>
+                        Der Rotton bei Angeboten hebt die Preissenkung hervor.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Schriften
+                <ul>
+                    <li>
+                        Die Schriftart Nonito passt sehr gut zu den abgerundeten Buchstaben des Logos und ist trotzdem einfach zu lesen.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <br>
+
+        <h2 id="funktionalitaeten">Funktionalitäten</h2>
+        <h3>Startseite</h3>
+        <img src="../assets/images/docu/funk_startseite.png" alt="Screenshot der Startseite">
+        <ul>
+            <li>
+                Keine Funktionalitäten auf der Startseite
+            </li>
+            <li>
+                Navigationsleiste
+                <ul>
+                    <li>
+                        Leitet mit einem Klick auf die entsprechenden Wörter auf die zugehörige Seite weiter
+                    </li>
+                    <li>
+                        Ausklappmenü in der Navigationsleiste bei dem Punkt "Produkte"
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <br>
+        <h3>Produktübersicht (Angebote, Produkte, Produkte nach Kategorie)</h3>
+        <img src="../assets/images/docu/funk_produkte.png" alt="Screenshot der Produktübersicht">
+        <ul>
+            <li>
+                Filter auf der linken Seite
+                <ul>
+                    <li>
+                        Filterung der Produkte nach Preis, Kategorie und Hersteller
+                    </li>
+                    <li>
+                        Beim Setzen einer Preisbeschränkung kann man Minimum (Maximum automatisch maximaler Preis aus der Datenbank), Maximum (Minimum automatisch 0) oder beides angeben; Kommazahlen müssen mit einem Punkt statt Komma geschrieben werden
+                    </li>
+                    <li>
+                        Bei der Auswahl der Kategorie kann man eine oder mehrere Kategorien anklicken
+                    </li>
+                    <li>
+                        Ist man über die Navigationsleiste bereits auf einer Kategorieseite, steht die Wahl der Kategorie nicht zur Verfügung
+                    </li>
+                    <li>
+                        Bei der Auswahl der Hersteller kann man einen oder mehrere Hersteller anklicken
+                    </li>
+                    <li>
+                        Um die Filterung auszuführen, muss man auf den Button "Filter anwenden" klicken
+                    </li>
+                    <li>
+                        Filter sind innerhalb eines Filterkriteriums oder-verknüpft und die Kriterien sind untereinander und-verknüpft
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Klickt man auf ein Produkt (Bild, Name, Preis), gelangt man auf die Produktdetailseite des Produktes
+            </li>
+        </ul>
+        <br>
+        <h3>Produktdetails</h3>
+        <img src="../assets/images/docu/funk_detail.png" alt="Screenshot der Produktdetailseite">
+        <ul>
+            <li>
+                Anzahl der Produkteinheiten, die man bestellen möchte, auswählbar
+            </li>
+            <li>
+                Über den Button "Zum Warenkorb hinzufügen" kann man das Produkt in der gewünschten Anzahl dem Warenkorb hinzufügen, bei mehrmaligem Betätigen des Button wird die Anzahl im Warenkorb erhöht, man bleibt auf der aktuellen Seite
+            </li>
+        </ul>
+        <br>
+        <h3>Warenkorb</h3>
+        <img src="../assets/images/docu/funk_warenkorb.png" alt="Screenshot der Warenkorbseite">
+        <ul>
+            <li>
+                Der Warenkorb wird in der Session gespeichert
+            </li>
+            <li>
+                Über einen Klick auf das Bild oder den Produktnamen gelangt man auf die entsprechende Produktdetailseite
+            </li>
+            <li>
+                Anzahl der Produkteinheiten, die man bestellen möchte, änderbar; wenn man die Anzahl auf 0 setzt, wird das Produkt aus dem Warenkorb entfernt
+            </li>
+            <li>
+                Über den Button "Warenkorb aktualisieren" kann man die geänderte Produktanzahl aktualisieren, die Preise werden dabei auch angepasst (auch die Angebotspreise werden berücksichtigt)
+            </li>
+            <li>
+                Über den Button "Zur Kasse" wird man auf die Kassenseite weitergeleitet
+            </li>
+        </ul>
+        <br>
+        <h3>Kasse</h3>
+        <img src="../assets/images/docu/funk_kasse.png" alt="Screenshot der Kassenseite">
+        <ul>
+            <li>
+                Über einen Klick auf das Bild oder den Produktnamen gelangt man auf die entsprechende Produktdetailseite
+            </li>
+            <li>
+                Die Zahlungsart muss ausgewält werden, um die Bestellung abzuschließen
+            </li>
+            <li>
+                Über den Button "Jetzt kaufen!" wird der Bestellungsprozess abgeschlossen
+                <ul>
+                    <li>
+                        In den Datenbanktabellen "order" und "orderitems" werden die Daten eingetragen
+                    </li>
+                    <li>
+                        Die Bestelldaten in der Session werden gelöscht
+                    </li>
+                    <li>
+                        Man wird automatisch zur Startseite weitergeleitet
+                    </li>
+                    <li>
+                        Ist man noch nicht eingeloggt, wird man auf die Login-Seite weitergeleitet, hat man sich dann angemeldet, wird man wieder auf die Kassenseite weitergeleitet
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <br>
+        <h3>Login</h3>
+        <img src="../assets/images/docu/funk_login.png" alt="Screenshot der Login-Seite">
+        <ul>
+            <li>
+                Hier müssen die Email-Adresse und das Passwort eingegeben und mit dem Button "Login" abgesendet werden
+            </li>
+            <li>
+                Die eingegebenen Daten werden mit denen in der Datenbanktabelle "account" verglichen
+            </li>
+            <li>
+                Existieren die Anmeldedaten, wird man eingeloggt
+            </li>
+            <li>
+                Ist der Haken bei "Eingeloggt bleiben" gesetzt, wird ein Cookie für 30 Tage gesetzt
+            </li>
+            <li>
+                Existieren die Anmeldedaten nicht, gibt es eine Fehlermeldung und die Daten müssen erneut eingegeben werden
+            </li>
+            <li>
+                Hat man noch kein Konto, gelangt man über "Konto erstellen" zu der entsprechenden Seite
+            </li>
+        </ul>
+        <br>
+        <h3>Konto erstellen</h3>
+        <img src="../assets/images/docu/funk_signup.png" alt="Screenshot der Registrierungsseite">
+        <ul>
+            <li>
+                Hier müssen Daten zur Kontoerstellung eingegeben werden
+            </li>
+            <li>
+                Das Passwort muss mindestens acht Zeichen lang sein, sonst gibt es eine Fehlermeldung
+            </li>
+            <li>
+                Alle Felder müssen ausgefüllt sein
+            </li>
+            <li>
+                Über den Button "Erstellen" werden die Daten abgesendet
+            </li>
+            <li>
+                Wenn die Email-Adresse in der Datenbank existiert, kann kein Konto erstellt werden und es gibt eine Fehlermeldung
+            </li>
+            <li>
+                Existiert die Email-Adresse noch nicht werden die entsprechenden Daten in die Datenbanktabelle "account" eingetragen
+            </li>
+            <li>
+                Existiert die Adresse bereits, wird die entprechende ID in "account" eingetragen, ansonsten wird die Adresse in "address" eingetragen und die ID in "account"
+            </li>
+            <li>
+                Wurde erfolgreich ein Konto erstellt, wird man automatisch zur Login-Seite weitergeleitet und muss sich einloggen
+            </li>
+            <li>
+                Über "zurück zum Login" kommt man wieder zur Login-Seite
+            </li>
+        </ul>
+        <br>
+        <h3>Konto</h3>
+        <img src="../assets/images/docu/funk_konto.png" alt="Screenshot der Kontoseite">
+        <ul>
+            <li>
+                Hier werden die Kontodaten angezeigt
+            </li>
+            <li>
+                Über "Logout" werden Session und Cookies mit User-Daten gelöscht und man wird auf die Login-Seite weitergeleitet
+            </li>
+            <li>
+                Über den Button "Profildaten ändern" wird man auf die Seite "Profil aktualisieren" weitergeleitet
+            </li>
+            <li>
+                Über den Button "Adresse ändern" wird man auf die entsprechende Seite weitergeleitet
+            </li>
+            <li>
+                Über den Button "Account löschen" werden Session und Cookies und der entsprechende Eintrag in der Datenbanktabelle "account" gelöscht und man wird auf die Login-Seite weitergeleitet
+            </li>
+        </ul>
+        <img src="../assets/images/docu/funk_profildaten.png" alt="Screenshot der Seite Profil aktualisieren">
+        <ul>
+            <li>
+                Möglichkeit zur Änderung einzelner oder aller Accountdaten und entsprechende Änderung in der Datenbanktabelle "account" über den Button "Aktualisieren"
+            </li>
+            <li>
+                Über "zurück zum Konto" kommt man wieder zur Kontoseite
+            </li>
+        </ul>
+        <img src="../assets/images/docu/funk_adresse.png" alt="Screenshot der Seite Adresse aktualisieren">
+        <ul>
+            <li>
+                Möglichkeit zur Änderung der Adresse, alle Felder müssen ausgefüllt sein
+            </li>
+            <li>
+                Über den Button "Aktualisieren" wird ein neuer Eintrag in der Datenbanktabelle "address" erstellt (falls Adresse noch nicht existiert) und die ID in "account" wird geändert
+            </li>
+            <li>
+                Über "zurück zum Konto" kommt man wieder zur Kontoseite
+            </li>
+        </ul>
+        <br>
+        <h3>Impressum und Datenschutz</h3>
+        <img src="../assets/images/docu/funk_impressum.png" alt="Screenshot des Impressums">
+        <ul>
+            <li>
+                Über "Dokumentation" gelangt man zur Dokumentation
+            </li>
+        </ul>
+        <img src="../assets/images/docu/funk_datenschutz.png" alt="Screenshot des Datenschutzes">
+        <ul>
+            <li>
+                Diese Seite enthält keine Funktionalitäten
+            </li>
+        </ul>
+        <br>
+
+        <h2 id="projektstruktur">Projektstruktur</h2>
+        <ul>
+            <li>
+                MVC
+            </li>
+            <li>
+                Ordner "assets" (Schriftarten, Bilder, CSS, JavaScript)
+            </li>
+            <li>
+                Ordner "config" (Datenbankenanbindung, Pfade definiert)
+            </li>
+            <li>
+                Ordner "controllers" (Seitenaufruf)
+            </li>
+            <li>
+                Ordner "core" (Basiscontroller, Funktionen, Basistabelle für Datenbank)
+            </li>
+            <li>
+                Ordner "documentation" (Dokumentation)
+            </li>
+            <li>
+                Ordner "models" (Datenschemata für die Datenbanktabellen)
+            </li>
+            <li>
+                Ordner "src" (Skript zur Erstellung der Datenbank und deren Testdaten)
+            </li>
+            <li>
+                Ordner "views" (Seiten der Website)
+            </li>
+        </ul>
+        <br>
+
+        <h2 id="datenbank">Datenbank</h2>
+        <img src="../assets/images/docu/datenbankmodell.png" alt="Datenbanken-Modell">
+        <br>
+
+        <h2 id="rollenmodell">Rollenmodell</h2>
+        <p>
+            Das Rollenmodell kommt zum Einsatz, wenn verschiedene Arten von Konten unterschiedliche Funktionen haben.
+        </p>
+        <p>
+            Da es auf unserer Seite nur eine Art von Kundenkonto gibt, kommt ein Rollenmodell nicht zum Einsatz.
+        </p>
+        <br>
+
+        <h2 id="flussbild">Flussbild für Dateneingabe</h2>
+        <h3>Bestellvorgang</h3>
+        <img src="../assets/images/docu/flussdiagramm.png" alt="Flussbild zum Bestellvorgang">
+        <br>
+
+        <h2 id="herausforderungen">Herausforderungen</h2>
+        <ul>
+            <li>
+                Umgang mit MVC
+                <ul>
+                    <li>
+                        Projekt ohne MVC zu zeitintensiv und Codewiederholungen
+                    </li>
+                    <li>
+                        Umstieg auf MVC
+                    </li>
+                    <li>
+                        Einarbeitung in MVC
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Übersichtlicher Code-Style
+            </li>
+            <li>
+                Psychische Belastung
+                <ul>
+                    <li>
+                        Pausen
+                    </li>
+                    <li>
+                        Rückendeckung der Gruppe
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Flüchtigkeitsfehler
+                <ul>
+                    <li>
+                        Routine beim Programmieren (PHP) und Schreiben (HTML und CSS)
+                    </li>
+                </ul>
+            </li>
+            <li>
+                JavaScript
+                <ul>
+                    <li>
+                        Lösung: offen
+                    </li>
+                </ul>
+            </li>
+            <li>
+                CSS
+                <ul>
+                    <li>
+                        Einbinden der Datei mit Import nicht vergessen!
+                    </li>
+                    <li>
+                        Responsive Webdesign - mittels Media Queries
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <br>
+
+        <h2 id="besonderheiten">Besonderheiten</h2>
+        <h3>Unvollständige Implementierungen</h3>
+        <ul>
+            <li>
+                JavaScript
+                <ul>
+                    <li>
+                        Formularvalidierung mit AJAX
+                    </li>
+                    <li>
+                        Dynamisches Nachladen von Datenbankinhalten
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <br>
+
+        <h2 id="projektmanagement">Projektmanagement-Dokumentation</h2>
+        <h3>Marlene Bauch, Johannes Otto, Michel Rost</h3>
+        <ul>
+            <li>
+                Ideensammlung, Auswahl der Funktionalitäten, Layoutentwürfe - recht zeitintensiv
+            </li>
+            <li>
+                Präsentationen - nicht sehr zeitintensiv
+            </li>
+            <li>
+                Datenbank erstellt - zeitintensiv, weil ständige Verbesserung der Datenbank
+            </li>
+            <li>
+                Datenbankanbindung - zeitintensiv wegen eines kleinen Fehlers
+            </li>
+            <li>
+                Ordnerstruktur mittels MVC - nicht aufwendig dank dem Vorbild Notenspiegel aus der Vorlesung
+            </li>
+            <li>
+                Navigationsleisten oben und unten inkl. Styling - aufwendig, da erste Versuche mit CSS
+            </li>
+            <li>
+                Produktseite mit Laden der Daten aus der Datenbank - dank der Hilfe von Herrn Friess für den Projektanfang (noch geringe PHP-Kenntnisse) nicht so zeitintensiv
+            </li>
+            <li>
+                Dokumentation - sehr zeitintensiv
+            </li>
+        </ul>
+        <br>
+        <h3>Johannes Otto, Michel Rost</h3>
+        <ul>
+            <li>
+                Login und Signup, Cookies und Session - sehr aufwendig, weil PHP noch nicht so gut verstanden
+            </li>
+            <li>
+                Kontoseite - geringer Zeitaufwand für den Umfang an Funktion
+            </li>
+        </ul>
+        <br>
+        <h3>Marlene Bauch</h3>
+        <ul>
+            <li>
+                Styling, Responsive Design - Mobiloptimierung der Navigationsleiste eher zeitintensiv
+            </li>
+            <li>
+                Vereinheitlichung der &lt;div class=""&gt; - aufwendig, weil man nichts übersehen darf
+            </li>
+            <li>
+                Anpassung der PHP-Dateien an das Styling - nicht sehr aufwendig
+            </li>
+            <li>
+                Filter auf der Angebotsseite hinzugefügt - sehr schnell erledigt
+            </li>
+            <li>
+                Anpassung der Berechnung des Angebotpreises in den entsprechenden Dateien - sehr schnell erledigt
+            </li>
+            <li>
+                Startseite, Impressum, Datenschutz - einfach und schnell dank Generatoren für Impressum und Datenschutz
+            </li>
+        </ul>
+        <br>
+        <h3>Johannes Otto</h3>
+        <ul>
+            <li>
+                Filter - aufwendig
+            </li>
+            <li>
+                Warenkorb und Checkout - aufwendig, aber PHP schon besser verstanden
+            </li>
+            <li>
+                JavaScript - zeitintensiv wegen mangelnder Kenntnisse von JavaScript
+            </li>
+        </ul>
+        <br>
+        <h3>Michel Rost</h3>
+        <ul>
+            <li>
+                Testdaten erstellt, Text für Startseite geschrieben - sehr zeitintensiv
+            </li>
+            <li>
+                Angebotsseite - nicht sehr aufwendig dank vorhandener Produkteseite
+            </li>
+        </ul>
+        <br>
+    </div>
+</body>
+
+</html>
