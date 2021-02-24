@@ -1,0 +1,93 @@
+/* General styling for the whole website */
+
+* {
+    font-family: Nunito, sans-serif;
+    color: #111111;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #0A3C0A;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #0A3C0A;
+}
+
+h3 {
+    font-size: 1.75rem;
+    color: #0A3C0A;
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: #0A3C0A;
+}
+
+.logo-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.check {
+    appearance: none;
+    padding: 8px;
+    background-color: white;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+}
+
+.check:checked {
+    background-color: #aaaaaa;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 6px;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+}
+
+input[type="number"] {
+    width: 90%;
+    padding: 4px;
+    margin-bottom: 6px;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #cccccc;
+    padding: 10px 20px;
+    margin: 4px 0;
+    float: left;
+    cursor: pointer;
+}
+
+.error-message {
+    border: 1px solid #ad0000;
+    border-radius: 4px;
+    text-align: center;
+    width: 400px;
+    max-width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.error-message li {
+    list-style-type: none;
+}

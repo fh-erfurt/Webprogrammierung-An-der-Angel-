@@ -1,0 +1,18 @@
+/* imports all style sheets */
+
+@import url(fonts.css);
+@import url(basis.css);
+@import url(login.css);
+@import url(signup.css);
+@import url(products.css);
+@import url(productDetails.css);
+@import url(account.css);
+@import url(legalNotice-privacy.css);
+
+/* desktop */
+
+@import url("desktop/import-desktop.css") only screen and (min-width: 670px);
+
+/* mobile if the navigation does not fit in one line anymore */
+
+@import url("mobile/import-mobile.css") only screen and (max-width: 670px);

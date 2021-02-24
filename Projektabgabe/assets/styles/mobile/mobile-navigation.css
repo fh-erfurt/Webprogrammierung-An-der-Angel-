@@ -1,0 +1,89 @@
+/* Styling for the mobile navigation */
+
+
+/* Styling menu button */
+
+label.hamburg-nav {
+    display: block;
+    background-color: #0A3C0A;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    margin: 0 auto;
+}
+
+input#hamburg-nav {
+    display: none;
+}
+
+.line {
+    position: absolute;
+    left: 10px;
+    height: 4px;
+    width: 55px;
+    background: white;
+    border-radius: 2px;
+    display: block;
+    transition: 0.5s;
+    transform-origin: center;
+}
+
+.line:nth-child(1) {
+    top: 12px;
+}
+
+.line:nth-child(2) {
+    top: 24px;
+}
+
+.line:nth-child(3) {
+    top: 36px;
+}
+
+#hamburg-nav:checked+.hamburg-nav .line:nth-child(1) {
+    transform: translateY(12px) rotate(-45deg);
+}
+
+#hamburg-nav:checked+.hamburg-nav .line:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburg-nav:checked+.hamburg-nav .line:nth-child(3) {
+    transform: translateY(-12px) rotate(45deg);
+}
+
+
+/* Styling menu */
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 2px 8px;
+    background-color: #0A3C0A;
+}
+
+nav li {
+    display: block;
+    padding: 2px 8px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.header nav {
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+#hamburg-nav:checked+.hamburg-nav+nav.topmenu {
+    max-height: 600px;
+}
+
+.dropdown-content {
+    padding-left: 10px;
+}

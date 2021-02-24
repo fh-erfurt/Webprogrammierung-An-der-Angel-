@@ -1,0 +1,30 @@
+/* Styling of the desktop home page */
+
+.home-wrapper {
+    overflow: auto;
+}
+
+.home-wrapper .header-image img {
+    max-width: 100%;
+}
+
+.home-wrapper h1 {
+    padding: 2% 5%;
+}
+
+.home-text {
+    max-width: 50%;
+    padding: 2% 5%;
+    display: inline;
+    float: left;
+}
+
+.home-text p {
+    font-size: 1.2rem;
+}
+
+.home-image img {
+    max-width: 50%;
+    padding: 2% 5%;
+    float: right;
+}

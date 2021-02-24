@@ -1,0 +1,6 @@
+/* Import all the style sheets for the desktop version */
+
+@import url("desktop-navigation.css");
+@import url("desktop-filter.css");
+@import url("desktop-cart-checkout.css");
+@import url("desktop-home.css");

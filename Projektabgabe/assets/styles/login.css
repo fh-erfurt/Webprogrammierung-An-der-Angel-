@@ -1,0 +1,39 @@
+/* Styling for the login page */
+
+.pages-login {
+    padding: 10px;
+}
+
+.login-wrapper {
+    background-color: #eeeeee;
+    padding: 10px;
+    width: 400px;
+    max-width: 90%;
+    margin: 20px auto;
+    box-shadow: 0 0 20px 0 #aaaaaa;
+    overflow: auto;
+}
+
+.login-wrapper h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+.login-wrapper .input {
+    padding: 10px;
+}
+
+.login-wrapper input[type="email"],
+.login-wrapper input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 6px;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+}
+
+.login-footer {
+    margin: 20px 4px;
+    float: right;
+}

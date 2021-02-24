@@ -1,0 +1,6 @@
+/* Import all the style sheets for the mobile version */
+
+@import url("mobile-navigation.css");
+@import url("mobile-filter.css");
+@import url("mobile-cart-checkout.css");
+@import url("mobile-home.css");

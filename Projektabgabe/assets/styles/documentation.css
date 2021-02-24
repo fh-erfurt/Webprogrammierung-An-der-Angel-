@@ -1,0 +1,87 @@
+/* Simple styling for the documentation */
+
+
+/* nunito-regular - latin */
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/nunito-v16-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/nunito-v16-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* nunito-700 - latin */
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/nunito-v16-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/nunito-v16-latin-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* nunito-800 - latin */
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/nunito-v16-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/nunito-v16-latin-800.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+* {
+    font-family: Nunito, sans-serif;
+    color: #111111;
+    font-size: 1rem;
+    margin: 0;
+    padding-left: 4px;
+    border: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #0A3C0A;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #0A3C0A;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #0A3C0A;
+}
+
+h3 date {
+    font-size: 1.5rem;
+    color: #0A3C0A;
+}
+
+h4 {
+    font-size: 1.2em;
+    color: #0A3C0A;
+}
+
+li {
+    margin-left: 20px;
+}
+
+img {
+    display: block;
+    width: 800px;
+    max-width: 90%;
+    border: 1px solid #aaaaaa;
+}
+
+a {
+    display: block;
+}

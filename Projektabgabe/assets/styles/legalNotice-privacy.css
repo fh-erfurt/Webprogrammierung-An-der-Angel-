@@ -1,0 +1,19 @@
+/* Styling for the legal notice and privacy page */
+
+.legal-notice-wrapper,
+.privacy-wrapper {
+    width: 600px;
+    max-width: 90%;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.legal-notice-wrapper li,
+.privacy-wrapper li {
+    margin-left: 20px;
+}
+
+.legal-notice-wrapper img,
+.privacy-wrapper img {
+    max-width: 100%;
+}

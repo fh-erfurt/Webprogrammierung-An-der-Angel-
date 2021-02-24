@@ -1,0 +1,49 @@
+/* Styling for the product detail page */
+
+.product-details-wrapper {
+    background-color: #eeeeee;
+    width: 500px;
+    max-width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 4px;
+    overflow: auto;
+    box-shadow: 0 0 20px 0 #aaaaaa;
+}
+
+.product-info,
+.add-to-cart {
+    padding: 10px;
+}
+
+.product-info div {
+    padding: 4px 0;
+}
+
+.product-details-wrapper h1 {
+    padding-left: 10px;
+}
+
+.product-info img {
+    width: 500px;
+    max-width: 98%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-to-cart input[type="number"] {
+    width: 40%;
+    margin-left: 10px;
+}
+
+.buy-quantity {
+    text-align: center;
+}
+
+.add-to-cart input[type="submit"] {
+    background-color: #cccccc;
+    padding: 10px 20px;
+    margin-top: 20px;
+}

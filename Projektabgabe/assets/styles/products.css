@@ -1,0 +1,56 @@
+/* Styling for the pages showing products */
+
+.products-wrapper,
+.category-wrapper,
+.sales-wrapper {
+    overflow: auto;
+}
+
+.products-wrapper h1,
+.category-wrapper h1,
+.sales-wrapper h1 {
+    padding-left: 10px;
+    margin-left: 214px;
+}
+
+.products,
+.sales {
+    overflow: auto;
+}
+
+.product img {
+    width: 380px;
+    max-width: 98%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.products a,
+.sales a {
+    text-decoration: none;
+}
+
+.product {
+    background-color: #eeeeee;
+    width: 400px;
+    max-width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    float: left;
+}
+
+.reduced {
+    color: #ad0000;
+}
+
+
+/* all products have the same height if there are at least two in a row */
+
+@media only screen and (min-width: 1060px) {
+    .product {
+        height: 480px;
+    }
+}

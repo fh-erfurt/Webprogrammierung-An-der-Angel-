@@ -1,0 +1,27 @@
+/* Styling for the mobile home page */
+
+.home-wrapper {
+    overflow: auto;
+}
+
+.home-wrapper .header-image img {
+    max-width: 100%;
+}
+
+.home-wrapper h1 {
+    padding: 10px;
+}
+
+.home-text {
+    max-width: 95%;
+    padding: 10px;
+}
+
+.home-text p {
+    font-size: 1.2rem;
+}
+
+.home-image img {
+    max-width: 95%;
+    padding: 10px;
+}
